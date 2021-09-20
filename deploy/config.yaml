@@ -44,7 +44,7 @@ jupyterhub:
           command:
             [
               "/srv/conda/envs/notebook/bin/gitpuller",
-              "https://github.com/TomAugspurger/pangeo-foss4g-2021",
+              "https://github.com/pangeo-data/foss4g-2021",
               "main",
               "workshop",
             ]
