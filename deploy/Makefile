@@ -23,8 +23,8 @@ cluster:
 userpool:
 	az aks nodepool add \
 	   --name users \
-	   --cluster-name pangeoCluster \
-	   --resource-group pangeo \
+	   --cluster-name $(CLUSTER) \
+	   --resource-group $(GROUP) \
 	   --enable-cluster-autoscaler \
 	   --node-count 1 \
 	   --min-count 0 --max-count 100 \
@@ -34,8 +34,8 @@ userpool:
 workerpool:
 	az aks nodepool add \
 	   --name workers \
-	   --cluster-name pangeoCluster \
-	   --resource-group pangeo \
+	   --cluster-name $(CLUSTER) \
+	   --resource-group $(GROUP) \
 	   --enable-cluster-autoscaler \
 	   --node-count 1 \
 	   --min-count 0 --max-count 50 \
