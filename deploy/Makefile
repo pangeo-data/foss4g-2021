@@ -38,8 +38,8 @@ workerpool:
 	   --resource-group $(GROUP) \
 	   --enable-cluster-autoscaler \
 	   --node-count 1 \
-	   --min-count 0 --max-count 50 \
-	   --node-vm-size Standard_D2s_v3 \
+	   --min-count 0 --max-count 200 \
+	   --node-vm-size Standard_E16_v3 \
 	   --priority Spot \
 	   --eviction-policy Delete \
 	   --spot-max-price -1 \

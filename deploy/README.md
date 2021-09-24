@@ -31,3 +31,7 @@ $ NODE_COUNT=1 make scale  # your number of users
 ```
 
 That'll get you a multi-user, Dask enabled hub up and running in 10-15 minutes.
+
+## Capacity notes
+
+We're assuming ~100 users for the tutorial. We're using a `Standard_D8s_v3` for the user pool, and assigning two users per node (4 CPU, 16 GiB of RAM).
