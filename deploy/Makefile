@@ -31,6 +31,15 @@ userpool:
 	   --node-vm-size Standard_D8s_v3 \
 	   --labels hub.jupyter.org/node-purpose=user
 
+manualuserpool:
+	az aks nodepool add \
+	   --name manualusers \
+	   --cluster-name $(CLUSTER) \
+	   --resource-group $(GROUP) \
+	   --node-count 0 \
+	   --node-vm-size Standard_D8s_v3 \
+	   --labels hub.jupyter.org/node-purpose=user
+
 workerpool:
 	az aks nodepool add \
 	   --name workers \
@@ -52,6 +61,13 @@ hub:
 		--namespace=dhub \
 		--values=config.yaml \
 		--values=secrets.yaml
+
+scale:
+	az aks nodepool scale \
+		--name=manualusers \
+		--cluster-name=$(CLUSTER) \
+		--resource-group=$(GROUP) \
+		--node-count=$(NODE_COUNT)
 
 clean:
 	az group delete -n $(GROUP)
