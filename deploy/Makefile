@@ -73,4 +73,4 @@ clean:
 	az group delete -n $(GROUP)
 
 image:
-	az acr build --registry=pcccr --image planetary-computer/radiant-earth-foss4g --file Dockerfile.mlhub .
+	az acr build --registry=pcccr --image planetary-computer/radiant-earth-foss4g:2021.09.27.0 --file Dockerfile.mlhub .
