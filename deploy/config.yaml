@@ -39,6 +39,9 @@ jupyterhub:
       guarantee: "12G"
       limit: "16G"
 
+    storage:
+      capacity: "15Gi"
+
     defaultUrl: "/lab/tree/radiant-mlhub/index.ipynb"
     lifecycleHooks:
       postStart:
