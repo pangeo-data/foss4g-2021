@@ -46,7 +46,7 @@ jupyterhub:
           command:
             [
               "/srv/conda/envs/notebook/bin/gitpuller",
-              "https://github.com/radiantearth/foss4g-2021"
+              "https://github.com/radiantearth/foss4g-2021",
               "main",
               "radiant-mlhub",
             ]
