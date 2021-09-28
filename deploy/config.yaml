@@ -98,7 +98,7 @@ dask-gateway:
 
     extraConfig:
       00-clusterconfig: |
-        c.KubeClusterConfig.idle_timeout = 5 * 60  # in seconds
+        c.KubeClusterConfig.idle_timeout = 10 * 60  # in seconds
         c.KubeClusterConfig.cluster_max_cores = 400  # 50 nodes @ 8 workers / node, 1 core / worker
         c.KubeClusterConfig.cluster_max_memory = "3200 G"  # 8 GiB / core
         c.KubeClusterConfig.cluster_max_workers = 400  # 1 core, 8 GiB / worker
