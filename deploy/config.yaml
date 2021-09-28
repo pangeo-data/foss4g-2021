@@ -39,16 +39,19 @@ jupyterhub:
       guarantee: "12G"
       limit: "16G"
 
-    defaultUrl: "/lab/tree/radiant-mlhub/index.ipynb"
+    storage:
+      capacity: "15Gi"
+
+    defaultUrl: "/lab/tree/workshop/index.ipynb"
     lifecycleHooks:
       postStart:
         exec:
           command:
             [
               "/srv/conda/envs/notebook/bin/gitpuller",
-              "https://github.com/radiantearth/foss4g-2021",
+              "https://github.com/pangeo-data/foss4g-2021",
               "main",
-              "radiant-mlhub",
+              "workshop",
             ]
 
     extraEnv:
