@@ -33,10 +33,10 @@ jupyterhub:
       tag: 2021.09.27.0
     startTimeout: 1200  # 20 * 60s = 10 minutes
     cpu:
-      guarantee: 3
+      guarantee: 2.5
       limit: 4
     memory:
-      guarantee: "12G"
+      guarantee: "10G"
       limit: "16G"
 
     storage:
